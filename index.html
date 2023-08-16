@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+    <title>Travel</title>
+</head>
+<body>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins:wght@300;400;500;700&display=swap');
+*{
+  box-sizing: border-box;
+  margin:0;
+  padding: 0;
+  background-color: #edf0f1;
+  
+}
+li, a{
+font-family: "Montserrat", sans-serif;
+font-weight: 500;
+font-size: 16px;
+color:dimgray;
+text-decoration: none;
+}
+button{
+  font-family: "Montserrat", sans-serif;
+font-weight: 500;
+font-size: 16px;
+color:#edf0f1;
+text-decoration: none;
+}
+
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 10%;
+}
+.logo{
+  cursor: pointer;
+  margin-right: auto;
+}
+.navlink{
+  list-style: none;
+
+}
+.navlink li{
+  display: inline-block;
+  padding: 0px 20px;
+
+}
+.navlink{
+  transition: all 0.3s ease 0s;
+
+}
+.navlink li a:hover{
+  color: black;
+}
+button{
+  display: inline-block;
+  padding: 9px 25px;
+  background-color: #5D50C6;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition:  0.7s ease;
+  
+
+}
+button :hover{
+  background-color: #5d50c7;
+  transform: scale(1.1);
+}
+.login{
+  margin-left: auto;
+  list-style: none;
+  display: inline-block;
+  padding: 0px 20px;
+  transition: all 0.3s ease 0s;
+ 
+}
+li .login:hover{
+  color: black;
+}
+section{
+  padding: 40px 150px;
+
+}
+
+
+
+.main{
+  width: 80%;
+  min-height: 80vh;
+  margin-top: 0px;
+  display: flex;
+  align-items: center;
+
+  
+
+  
+
+}
+.ect{
+  padding: 0px 1px;
+}
+.main h6{
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.8em;
+  font-weight: 100;
+  
+  
+
+}
+.main h4{
+  color: black;
+  font-size: 4em;
+  font-weight: 100;
+}
+.main h4 span{
+  color: #f85e9f;
+  font-size:1em;
+  font-weight: 100;
+}
+.main h5 span{
+  display: inline-block;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  color: dimgray;
+  font-size:0,5em;
+  font-weight: 100;
+}
+
+.img{
+  width: 80%;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  position:relative;
+  left: 30%;
+  
+}
+
+.main-btn{
+  
+
+color:white;
+background-color: #5D50C6;
+text-decoration: none;
+font-size: 1.0em;
+font-weight: 600;
+display: inline-block;
+padding: 5px 10px;
+letter-spacing: 1px;
+border-radius: 15px;
+margin-top: 40px;
+margin-bottom: 40px;
+transition: 0.7s ease;
+justify-content: space-between;
+
+}
+.main-btn:hover{
+  background-color: #5f51c7;
+  transform: scale(1.1);
+}
+.watch {
+  
+  display:inline-flex;
+  align-items: center;
+  color: #000;
+  font-size: 1.0em;
+  font-weight: 300;
+  margin-left: 40px;
+  margin-top: 40px;
+margin-bottom: 40px;
+
+   
+}
+.sites{
+  position: absolute;
+  bottom: 0;
+  width: 80%;
+  height: 55px;
+  
+  display: inline-flex;
+  align-items: center;
+  color: gray;
+  font-size: 1.0em;
+  font-weight: 200;
+  margin-top: 60px;
+  margin-bottom: 10px;
+  justify-content: space-between;
+}
+section.cards{
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+.title{
+  color:#f85e9f;
+  font-size: 1.1em;
+  font-weight: 100;
+  margin-left: 20px;
+  letter-spacing: 2px;
+}
+.content{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.card{
+  background-color: #edf0f5;
+  width: 14em;
+  height: 20em;
+  box-shadow: 0 5px 25px rgba(1 1 1 / 15%);
+  border-radius: 10px;
+  padding: 25px;
+  margin: 15px;
+  transition: 0.7s ease;
+  overflow-x: scroll;
+}
+.card:hover{
+  transform: scale(1.1);
+  
+
+}
+.seviceicon{
+  font-size: 1em;
+  text-align: center;
+}
+.info{
+  text-align: center;
+}
+.info h3{
+  font-size: 1.2em;
+  font-weight: 500;
+  margin: 20px;
+}
+.title2{
+  color:#f85e9f;
+  font-size: 1.1em;
+  font-weight: 100;
+  margin-left: 20px;
+  letter-spacing: 2px;
+}
+.card-img-top{
+  border-radius: 50px;
+  padding: 20px;
+
+}
+.card2{
+  border-radius: 30px;
+  box-shadow: 0 5px 25px rgba(1 1 1 / 15%);
+  transition: 0.5s ease;
+  margin: 40px;
+
+}
+.card2:hover{
+  transform: scale(1.1);
+  
+
+}
+.card-body{
+padding: 25px;
+margin-top: -15px;
+justify-content: center;
+}
+section.page3{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #edf0f5;
+}
+.wrapper{
+  margin: 150px auto;
+  width: 70%;
+  float: left;
+
+
+}
+.p3{
+  width: 99%;
+  min-height: 88vh;
+  display: flex;
+  
+  position:relative;
+  right:  30%;  
+  
+}
+.text-box{
+  display: flex;
+  
+  text-align:left;
+  
+
+
+}
+
+.text-box h4{
+  color: #f85e9f;
+  font-size: 2.2em;
+  font-weight: 100;
+  margin-right: 20px;
+  letter-spacing: 2px;
+  margin-top: 30px;
+  justify-content: center;
+  
+}
+.text-box p{
+  margin-top: 30px;
+  
+  align-items: center;
+}
+
+
+
+</style>
+
+
+    <header>
+        
+          <img class="logo" src="logonav.png" alt="logo">
+          <nav>
+            <ul class="navlink">
+              <li><a href="#" >Home</a></li>
+              <li><a href="#" >Discover</a></li>
+              <li><a href="#" >Special Deals</a></li>
+              <li><a href="#" >Contact</a></li>
+            </ul>
+
+          </nav>
+          <li class="login"><a href="#">Log In</a></li>
+          <a class="cta" href="#"><button>Sign Up</button></a>
+    </header>
+
+
+    <section class="main">
+      <div class="ect">
+        <a href="#Discover" ><h6 style="color: #F85E9F">Explore the world! <img  style="padding: 0;margin: 0;    "src="work 1work.png" alt="" height="12px" > </h6></a>
+        <b><h4> Travel<span> top destination</span>of the World</h4></b>
+          <b> <h5><span> we always make our customer happy by providing<br>
+        as many choices as possible</span></h5></b>
+         
+         <a href="#Discover" class="main-btn">Get started</a>
+         <a  href ="#" class="watch "><img src="watch.png " alt="" >Watch Demo</a>
+        
+      </div> 
+      <div class="img">
+       <img src="picmain.png",alt="" height="750">
+     </div>
+      <div class="sites">
+       <a href="https://www.tripadvisor.fr"><img src="trep.png"> </a>
+       <a href="https://www.expedia.com/?clickref=1100lxHvpgdz&affcid=US.DIRECT.PHG.1101l307597.0&ref_id=1100lxHvpgdz&my_ad=AFF.US.DIRECT.PHG.1101l307597.0&afflid=1100lxHvpgdz&gclid=Cj0KCQjwoeemBhCfARIsADR2QCv436j1AY5LsR54mIkqDkJ-S5f4tHvjYGeILYiypOIN-i25HoA8wpUaAt-OEALw_wcB"><img src="exp.png"> </a>
+       <a href="https://www.booking.com/index.html?aid=815197&label=LA9SB5oyWYyFHgDZVPmzv1"><img src="box.png"> </a>
+       <a href="https://www.airbnb.fr"><img src="Group 9235.png"> </a>
+       <a href="https://www.orbitz.com"><img src="orbitz.png"> </a>
+      
+
+      </div>
+    </section>
+    <section class="cards"id ="services">
+      
+       <b><h4  class =" title">services<br><span style="color: #000;font-size: 1.4em;display: block; margin-top: 10px; font-weight: 400;" ><b>Our top value<br>categories for you</b></h4></span></b>
+        
+     
+      <div class="content">
+
+        <div class="card">
+          <div class="seviceicon">
+            <img src="destination 1.png">
+        
+
+
+          </div>
+          <div class="info">
+            <h3>Best Tour Guide</h3>
+            <p style="color:dimgray;">What looked like a small patch of purple grass above five feet</p>
+
+          </div>
+           
+
+        </div>
+        <div class="card">
+          <div class="seviceicon">
+            <img src="booking 1.png">
+        
+
+
+          </div>
+          <div class="info">
+            <h3>Easy Booking </h3>
+            <p style="color:dimgray;">Square, was moving across the sand in their direction.</p>
+
+          </div>
+           
+
+        </div>
+        <div class="card">
+          <div class="seviceicon">
+            <img src="cloudy 12.png">
+        
+
+
+          </div>
+          <div class="info">
+            <h3>Weather Forecast</h3>
+            <p style="color:dimgray;">What looked like a small patch of purple grass, above five feet.</p>
+
+          </div>
+           
+
+        </div>
+      </div>
+
+    </section>
+      <div class="container2 py-5">
+      <b><h4  class =" title2">Top Destination</b><br><span style="color: #000;font-size: 1.4em;display: block; margin-top: 10px;font-weight: 400;" ><b>Explore top destination</b></h4></span>
+        
+      <div class="row row-cols-1 row-cols-md-3 g-4 py-5">
+     
+        <div class="col">
+          <div class="card2">
+            <img src="Rectangle 61.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <div class="d-flex justify-content-around">
+                
+              
+               <h5 class="card-title">Paradise Beach, Bantayan Island </h5>
+               <h3 style="color:#F85E9F ;">$550.16</h3>
+              </div>
+              <p class="card-text">Rome, Italy.</p>
+              <div class="text-body-secondary"style="color:#ff5722 ;">
+                <p class="card-text"><small style="color:#ff5722"  >4.8 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAAdCAYAAABWk2cPAAAACXBIWXMAAAsTAAALEwEAmpwYAAABLklEQVR4nO2TT0vDQBBH0yhSKKgUD9VKrAo55JQ0Fz9vtPUg/g2iF1tooz1YoVZpkyIUz/0CnnwyrhUUb24jSB4sYX6z8NhhYhgZGRn/FmL3JV1h4o65rkDiPqcnjTbhfAluKqQjHLldwmXYM+GiCLH3oF8ycPvc2q9EG9BYg8sVqM1DYEB9TtWSS1/uDbz+76Wx36KzDWER6iYEOSX8PDmVS1/uxX5Lz2uH/hHtLTguwO43qdQnBYgsGHlXWoRTSPyAjgX7H6OdHhm15IkfGLOAtqUWSEZaM9UrpW5bs9lixk6JRgkO83C2qJZHvgd53vNkp6xfOqqe0lyH5irc2fKrPNG1Vd0qQ+KF+qVDb8K9A8Nq72te7ancm+iXPjoLYJg/9jBM6WuXZmRk/BlvLff91cJqpyYAAAAASUVORK5CYII="></small></p>
+               </div>
+              
+            </div>
+          </div>
+       </div>     
+       
+          <div class="col">
+           <div class="card2">
+             <img src="Rectangle 62.png" class="card-img-top" alt="...">
+              <div class="card-body">
+               <div class="d-flex justify-content-around">
+                 <h5 class="card-title">Ocean with full of Colors</h5>
+                 <h3 style="color:#F85E9F ;">$20.99</h3>
+               </div>
+               <p class="card-text">Maldives.</p>
+                <div class="text-body-secondary"style="color:#ff5722 ;">
+                 <p class="card-text"><small style="color:#ff5722" >4.5 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAAdCAYAAABWk2cPAAAACXBIWXMAAAsTAAALEwEAmpwYAAABLklEQVR4nO2TT0vDQBBH0yhSKKgUD9VKrAo55JQ0Fz9vtPUg/g2iF1tooz1YoVZpkyIUz/0CnnwyrhUUb24jSB4sYX6z8NhhYhgZGRn/FmL3JV1h4o65rkDiPqcnjTbhfAluKqQjHLldwmXYM+GiCLH3oF8ycPvc2q9EG9BYg8sVqM1DYEB9TtWSS1/uDbz+76Wx36KzDWER6iYEOSX8PDmVS1/uxX5Lz2uH/hHtLTguwO43qdQnBYgsGHlXWoRTSPyAjgX7H6OdHhm15IkfGLOAtqUWSEZaM9UrpW5bs9lixk6JRgkO83C2qJZHvgd53vNkp6xfOqqe0lyH5irc2fKrPNG1Vd0qQ+KF+qVDb8K9A8Nq72te7ancm+iXPjoLYJg/9jBM6WuXZmRk/BlvLff91cJqpyYAAAAASUVORK5CYII="></small></p>
+                </div>
+             </div>
+           </div>
+          </div>
+          <div class="col">
+           <div class="card2">
+             <img src="Rectangle 63.png" class="card-img-top" alt="...">
+             <div class="card-body">
+               <div class="d-flex justify-content-around">
+                 <h5 class="card-title">Mountain View, Above the cloud</h5>
+                 <h3 style="color:#F85E9F ;">$150.99</h3>
+               </div>
+               <p class="card-text">United Arab Emeries .</p>
+               <p class="card-text"><small  style="color:#ff5722 ;">5.0 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAAdCAYAAABWk2cPAAAACXBIWXMAAAsTAAALEwEAmpwYAAABLklEQVR4nO2TT0vDQBBH0yhSKKgUD9VKrAo55JQ0Fz9vtPUg/g2iF1tooz1YoVZpkyIUz/0CnnwyrhUUb24jSB4sYX6z8NhhYhgZGRn/FmL3JV1h4o65rkDiPqcnjTbhfAluKqQjHLldwmXYM+GiCLH3oF8ycPvc2q9EG9BYg8sVqM1DYEB9TtWSS1/uDbz+76Wx36KzDWER6iYEOSX8PDmVS1/uxX5Lz2uH/hHtLTguwO43qdQnBYgsGHlXWoRTSPyAjgX7H6OdHhm15IkfGLOAtqUWSEZaM9UrpW5bs9lixk6JRgkO83C2qJZHvgd53vNkp6xfOqqe0lyH5irc2fKrPNG1Vd0qQ+KF+qVDb8K9A8Nq72te7ancm+iXPjoLYJg/9jBM6WuXZmRk/BlvLff91cJqpyYAAAAASUVORK5CYII="></small></p>
+             </div>
+           </div>
+         </div>
+     </div>
+      </div>
+    <section class="page3" id="p3">
+     <div class="wrapper">
+       <div class="left">
+         <img class="p3"src="Group 9238p3.png">
+        </div>
+          <div class="text-box">
+            <b><h4  class =" title3">Travel Point</b><br><span style="color: #000;font-size: 1.4em;display: block; margin-top: 10px;font-weight: 400;" ><b>We helping you find your dream location</b></h4></span>
+            <p style="color: dimgray;">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC.</p>
+           </div>
+     </div>
+  </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
